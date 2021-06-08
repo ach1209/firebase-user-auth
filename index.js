@@ -1,5 +1,4 @@
 // Replace with provided config from Firebase
-
 const firebaseConfig = {
   apiKey: "API_KEY",
   authDomain: "PROJECT_ID.firebaseapp.com",
