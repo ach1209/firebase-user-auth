@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firebase User Authentication</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+  
+  <div id="app" class="max-w-2xl mx-auto">
+    
+    <button id="logout-btn" class="bg-purple-500 hover:bg-purple-400 text-white font-semibold w-20 p-2 rounded-sm" style="display: none;">Logout</button>
+
+    <div class="forms">
+      <div id="form-1" class="max-w-full bg-gray-50 p-6 my-4 border rounded-md shadow">
+        <h2 class="text-xl text-purple-600 font-semibold">Create Account</h2>
+        <form id="account-creation-form" class="flex flex-col">
+          <label for="email" class="h-12 flex items-center">Email</label>
+          <input type="email" name="email" id="email" class="border focus:border-purple-700 rounded outline-none h-8 px-2">
+          <label for="pwd" class="h-12 flex items-center">Password</label>
+          <input type="password" name="pwd" id="pwd" class="border focus:border-purple-700 rounded outline-none h-8 px-2 mb-6">
+          <button type="submit" id="submit-btn" class="bg-purple-500 hover:bg-purple-400 text-white font-semibold w-20 p-2 rounded-sm">Submit</button>
+        </form>
+      </div><!-- Form 1 -->
+      <div id="form-2" class="max-w-full bg-gray-50 p-6 border rounded-md shadow">
+        <h2 class="text-xl text-purple-600 font-semibold">Sign In</h2>
+        <form id="sign-in-form" class="flex flex-col">
+          <label for="email-in" class="h-12 flex items-center">Email</label>
+          <input type="email" name="email-in" id="email-in" class="border focus:border-purple-700 rounded outline-none h-8 px-2">
+          <label for="pwd-in" class="h-12 flex items-center">Password</label>
+          <input type="password" name="pwd-in" id="pwd-in" class="border focus:border-purple-700 rounded outline-none h-8 px-2 mb-6">
+          <button type="submit" id="login-btn" class="bg-purple-500 hover:bg-purple-400 text-white font-semibold w-20 p-2 rounded-sm">Login</button>
+        </form>
+      </div><!-- Form 2 -->
+    </div>
+
+    <div class="info"></div>
+
+  </div>
+  
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+  <script src="index.js"></script>
+
+</body>
+</html>
